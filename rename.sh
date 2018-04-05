@@ -100,6 +100,6 @@ _printf "Creating new README.md file..."
 echo "# Moodle local plugin ${NEWNAME}" > README.md
 printf "OK\n"
 
-echo '\nRenaming done without errors. Happy codding!\n'
+printf '\nRenaming done without errors. Happy codding!\n'
 
 exit 0
