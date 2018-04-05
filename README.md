@@ -1,14 +1,14 @@
-# Moodle mod plugin template
+# Moodle local plugin template
 
-The following steps should get you up and running with this module template code.
+The following steps should get you up and running with this local plugin boilerplate code.
 
 ### 1. Download repository
 
-Unzip this repo or clone it within the Moodle directory `mod/newmodule`
+Unzip this repo or clone it within the Moodle directory `local/newmodule`
 
 ### 2. Rename files and references
 
-Pick a name for the new module. The module name MUST be lower case and can't contain underscores. You should check https://moodle.org/plugins/ to make sure that your name is not already used by an other module. Registering the plugin at https://moodle.org/plugins/registerplugin.php will secure it for you.
+Pick a name for the new plugin. The plugin name MUST be lower case and can't contain underscores. You should check https://moodle.org/plugins/ to make sure that your name is not already used by an other local plugin. Registering the plugin at https://moodle.org/plugins/registerplugin.php will secure it for you.
 
 From the command line run the bash script `rename.sh`. For example, if the name you have chosen is "tictactoe" run:
 
@@ -16,11 +16,11 @@ From the command line run the bash script `rename.sh`. For example, if the name 
 sh rename.sh --name=tictactoe --copyright="2018 Mitxel Moriana <mitxel+moriana@my-email.com>"
 ```
 
-If the script is successful it will create a new module folder with the provided module name and all the renaming operations done. Then you may delete this repository folder.  
+If the script is successful it will create a new local plugin folder with the provided name and all the renaming operations done. Then you may delete this repository folder.  
 
 If this script fails or if you prefer to do the renaming operations manually, follow this steps: 
 
-* Rename the newmodule/ folder to the name of your module (eg "tictactoe").
+* Rename the newmodule/ folder to the name of your plugin (eg "tictactoe").
 
 * Edit all the files in this directory and its subdirectories and change
   all the instances of the string "newmodule" to your module name
@@ -32,32 +32,24 @@ If this script fails or if you prefer to do the renaming operations manually, fo
   $ find . -type f -exec sed -i '' 's/newmodule/tictactoe/g' {} \;
   $ find . -type f -exec sed -i '' 's/NEWMODULE/TICTACTOE/g' {} \;
 
-* Rename the file lang/en/newmodule.php to lang/en/tictactoe.php
+* Rename the file lang/en/local_newmodule.php to lang/en/local_tictactoe.php
   where "tictactoe" is the name of your module
 
-* Rename all files in backup/moodle2/ folder by replacing "newmodule" with
-  the name of your module
-
-  On Linux based systems you can perform this and previous steps by calling:
-  $ find . -depth -name '*newmodule*' -execdir bash -c 'mv -i "$1" "${1//newmodule/tictactoe}"' bash {} \;
-
-* Modify version.php and set the initial version of you module.
+* Modify version.php and set the initial version of you plugin.
 
 * Update the copyright information withing all the files.
 
 ### 3. Plugin installation
 
-Visit `Settings > Site Administration > Notifications` and run the plugin installation/update. After the update check that the module's DB tables were successfully created.
-
-Go to `Site Administration > Plugins > Activity modules > Manage activities` and check that the new module has been added to the list of installed modules.
+Visit `Settings > Site Administration > Notifications` and run the plugin installation/update.
 
 ### Happy coding!
 
-You may now proceed to write and run your own code. You will probably want to modify `local_form.php` and `view.php` as a first step.
+You may now proceed to write and run your own code.
 
 Check `db/access.php` to add capabilities.
 
-Go to `Settings > Site Administration > Development > XMLDB editor` and add and modify the module's DB tables.
+Go to `Settings > Site Administration > Development > XMLDB editor` and add or modify the local plugin's DB tables if you need any SQL data persistence. Check `db/install.xml`, `db/install.php`, `db/upgrade.php` and `db/uninstall.php` to setup common DB managing operations.
 
 We encourage you to share your code and experience in http://moodle.org
 
