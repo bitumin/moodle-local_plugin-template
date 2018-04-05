@@ -37,6 +37,6 @@ defined('MOODLE_INTERNAL') || die();
  * @param int $oldversion
  * @return bool
  */
-function xmldb_newmodule_upgrade($oldversion) {
+function xmldb_local_newmodule_upgrade($oldversion) {
     return true;
 }

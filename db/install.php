@@ -30,7 +30,7 @@
  *
  * @see upgrade_plugins_modules()
  */
-function xmldb_newmodule_install() {
+function xmldb_local_newmodule_install() {
 }
 
 /**
@@ -38,5 +38,5 @@ function xmldb_newmodule_install() {
  *
  * @see upgrade_plugins_modules()
  */
-function xmldb_newmodule_install_recovery() {
+function xmldb_local_newmodule_install_recovery() {
 }
