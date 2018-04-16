@@ -41,7 +41,7 @@ defined('MOODLE_INTERNAL') || die();
  * @param stdClass $module current newmodule instance record
  * @param cm_info $cm course module information
  */
-function newmodule_extend_navigation(navigation_node $navref, stdClass $course, stdClass $module, cm_info $cm) {
+function local_newmodule_extend_navigation(navigation_node $navref, stdClass $course, stdClass $module, cm_info $cm) {
     // TODO Delete this function and its docblock, or implement it.
 }
 
@@ -54,6 +54,6 @@ function newmodule_extend_navigation(navigation_node $navref, stdClass $course, 
  * @param settings_navigation $settingsnav complete settings navigation tree
  * @param navigation_node $newmodulenode newmodule administration node
  */
-function newmodule_extend_settings_navigation(settings_navigation $settingsnav, navigation_node $newmodulenode = null) {
+function local_newmodule_extend_settings_navigation(settings_navigation $settingsnav, navigation_node $newmodulenode = null) {
     // TODO Delete this function and its docblock, or implement it.
 }

@@ -32,7 +32,7 @@ defined('MOODLE_INTERNAL') || die();
  *
  * @param array $things
  * @return object
- *function newmodule_do_something_useful(array $things) {
+ *function local_newmodule_do_something_useful(array $things) {
  *    return new stdClass();
  *}
  */

@@ -21,7 +21,8 @@ defined('MOODLE_INTERNAL') || die();
 require_once(__DIR__ . '/../locallib.php');
 
 /**
- * Class local_newmodule_api
+ * Class api
+ * @package local_newmodule
  */
 class api {
 }
