@@ -31,7 +31,7 @@ for i in "$@"; do
         ;;
     esac
 done
-if ! [[ ${NEWNAME} =~ ^[a-z]+$ ]]; then
+if ! [[ ${NEWNAME} =~ ^[_a-z]+$ ]]; then
     echo "(ERROR) Name parameter is required and must be a letters only lowercase value. Eg: --name=widget"; exit 1
 fi
 if ! [[ ${NEWCOPYRIGHT} =~ ^[-_0-9a-zA-Z\>\<@.\ ]+$ ]]; then
